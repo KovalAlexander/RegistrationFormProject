@@ -1,0 +1,22 @@
+{
+  "timeForDefaultWait":1,
+  "timeForWaitElement":1,
+  "timeForExplicitWaitLow":"10",
+  "timeForExplicitWaitHeight":"30",
+
+  "title":"Форма регистрации",
+
+
+  "googleFormURL": "https://goo.gl/forms/t16Uov7ZHXCrB2ZE2",
+  "baseURL":"https://docs.google.com/forms/d/e/1FAIpQLSdqT5F9_qhPDmJ4lfIH7buVkUvjf4LS9ODdqD7PYfVbfFTnpA",
+  "relativeURLRegistrationForm": "/viewform",
+  "relativeURLResponsePage": "/formResponse",
+
+  "driverName":"webdriver.chrome.driver",
+  "driverPath":"./src/drivers/chromedriver(65-67)",
+
+
+  "validEmail":"test@test.test",
+  "userName":"Александр",
+  "userGender":"Мужской"
+}

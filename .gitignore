@@ -1,0 +1,9 @@
+.idea
+.allure
+allure-results
+log
+target
+
+*.iml
+*.ipr
+*.iws
