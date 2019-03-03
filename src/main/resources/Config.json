@@ -13,7 +13,7 @@
   "relativeURLResponsePage": "/formResponse",
 
   "driverName":"webdriver.chrome.driver",
-  "driverPath":"./src/drivers/chromedriver(65-67)",
+  "driverPath":"./src/drivers/chromedriver(71-73).exe",
 
 
   "validEmail":"test@test.test",
