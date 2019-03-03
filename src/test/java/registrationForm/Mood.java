@@ -23,7 +23,7 @@ public class Mood extends ParentTest {
     @Test
     @Description("TestCase_38: Make sure that can check/uncheck several options in the «Как ваше настроение ?» section")
     @Severity(SeverityLevel.MINOR)
-    public void makeSureThatCanCheckUnCheckSeveralOption(){
+    public void makeSureThatCanCheckUnCheckSeveralOption() {
         registrationFormPage.openRegistrationForm();
         registrationFormPage.checkURL();
         registrationFormPage.setStateOfMoodCheckBox("Супер", "check");
@@ -43,7 +43,7 @@ public class Mood extends ParentTest {
     @Test
     @Description("TestCase_39: Make sure that can check/uncheck all options in the «Как ваше настроение ?» section")
     @Severity(SeverityLevel.MINOR)
-    public void makeSureThatCanCheckUnCheckAllOption(){
+    public void makeSureThatCanCheckUnCheckAllOption() {
         registrationFormPage.openRegistrationForm();
         registrationFormPage.checkURL();
         registrationFormPage.setStateOfMoodCheckBox("Супер", "check");
@@ -75,7 +75,7 @@ public class Mood extends ParentTest {
     @Test
     @Description("TestCase_42: Verify that «Другое» field is required for filling if selected")
     @Severity(SeverityLevel.NORMAL)
-    public void verifyThatAnotherFieldIsRequired(){
+    public void verifyThatAnotherFieldIsRequired() {
         registrationFormPage.openRegistrationForm();
         registrationFormPage.checkURL();
         registrationFormPage.setStateOfMoodCheckBox("Другое:", "check");
@@ -88,7 +88,7 @@ public class Mood extends ParentTest {
     @Test
     @Description("TestCase_43: Verify that validation is not displayed if entered «Другое» value")
     @Severity(SeverityLevel.CRITICAL)
-    public void verifyThatValidationIsNotDisplayedIfEnteredAnotherValue(){
+    public void verifyThatValidationIsNotDisplayedIfEnteredAnotherValue() {
         registrationFormPage.openRegistrationForm();
         registrationFormPage.checkURL();
         registrationFormPage.setStateOfMoodCheckBox("Другое:", "check");

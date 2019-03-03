@@ -11,7 +11,7 @@ public class FormResponse extends ParentTest {
     @Test
     @Description("TestCase_48: Verify content of the area form response")
     @Severity(SeverityLevel.NORMAL)
-    public void verifyContentOfTheFormResponseArea(){
+    public void verifyContentOfTheFormResponseArea() {
         registrationFormPage.openRegistrationForm();
         registrationFormPage.checkURL();
         registrationFormPage.submitForm();

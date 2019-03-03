@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class FormResponsePage extends ParentPage {
 
-    @FindBy (xpath = ".//div[@class='freebirdFormviewerViewResponseConfirmContentContainer']")
+    @FindBy(xpath = ".//div[@class='freebirdFormviewerViewResponseConfirmContentContainer']")
     private WebElement areaFormResponse;
 
     final String link_SendOneMoreResponse = ".//a[contains(text(),'Отправить ещё один ответ')]";
@@ -19,7 +19,6 @@ public class FormResponsePage extends ParentPage {
         super(webDriver, config.relativeURLResponsePage);
     }
 
-    @Step
     public boolean isSuccessfullyResponseDisplayed() {
         return actionsWithElements.isElementDisplayed(areaFormResponse);
     }
@@ -28,9 +27,8 @@ public class FormResponsePage extends ParentPage {
         return actionsWithElements.getElementText(areaFormResponse);
     }
 
-    @Step
-    public boolean checkThatSendOneMoreResponseIsLink(){
-        if (actionsWithElements.isPresentXpath(link_SendOneMoreResponse)){
+    public boolean checkThatSendOneMoreResponseIsLink() {
+        if (actionsWithElements.isPresentXpath(link_SendOneMoreResponse)) {
             return true;
         }
         return false;

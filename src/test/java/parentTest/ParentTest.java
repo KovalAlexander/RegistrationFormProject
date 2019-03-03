@@ -16,8 +16,8 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import pages.RegistrationFormPage;
 import pages.FormResponsePage;
+import pages.RegistrationFormPage;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
@@ -46,6 +46,7 @@ public class ParentTest {
 
     /**
      * Check expected result with with indication expected and actual result
+     *
      * @param message
      * @param actualResult
      * @param expectedResult
@@ -57,6 +58,7 @@ public class ParentTest {
 
     /**
      * Check expected result with with verify actual result (expected - always true)
+     *
      * @param message
      * @param actualResult
      */
@@ -67,16 +69,6 @@ public class ParentTest {
 
     @Step
     public void checkExpectedResult(String message, String actualResult, String expectedResult) {
-        Assert.assertEquals(message, expectedResult, actualResult);
-    }
-
-    @Step
-    public void checkExpectedResult(String message, Double actualResult, Double expectedResult) {
-        Assert.assertEquals(message, expectedResult, actualResult);
-    }
-
-    @Step
-    public void checkExpectedResult(String message, Integer actualResult, Integer expectedResult) {
         Assert.assertEquals(message, expectedResult, actualResult);
     }
 
@@ -114,6 +106,7 @@ public class ParentTest {
 
     /**
      * Thread sleep
+     *
      * @param milliseconds
      */
     private void sleep(int milliseconds) {

@@ -69,7 +69,7 @@ public class Gender extends ParentTest {
     @Test
     @Description("TestCase_35: Make sure that validation disappears after selecting gender")
     @Severity(SeverityLevel.CRITICAL)
-    public void makeSureThatValidationDisappearsAfterSelectingGender(){
+    public void makeSureThatValidationDisappearsAfterSelectingGender() {
         registrationFormPage.openRegistrationForm();
         registrationFormPage.checkURL();
         registrationFormPage.clickSendButton();

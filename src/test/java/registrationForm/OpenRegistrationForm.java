@@ -9,9 +9,9 @@ import parentTest.ParentTest;
 public class OpenRegistrationForm extends ParentTest {
 
     @Test
-    @Description ("TestCase 1: Make sure that form is opened")
+    @Description("TestCase 1: Make sure that form is opened")
     @Severity(SeverityLevel.CRITICAL)
-    public void makeSureThatFormIsOpened(){
+    public void makeSureThatFormIsOpened() {
         registrationFormPage.openRegistrationForm();
         registrationFormPage.checkURL();
         checkExpectedResult("Form should be opened and 'Send' button should be displayed", registrationFormPage.isSendButtonDisplayed());
@@ -20,7 +20,7 @@ public class OpenRegistrationForm extends ParentTest {
     @Test
     @Description("TestCase 2: Verify of the title")
     @Severity(SeverityLevel.MINOR)
-    public void checkTitle(){
+    public void checkTitle() {
         registrationFormPage.openRegistrationForm();
         registrationFormPage.checkURL();
         registrationFormPage.checkTitle();
@@ -29,7 +29,7 @@ public class OpenRegistrationForm extends ParentTest {
     @Test
     @Description("TestCase_45: Make sure that new form is opened if click «Отправить еще один ответ»")
     @Severity(SeverityLevel.NORMAL)
-    public void makeSureThatNewFormIsOpenedIfClickSendOneMoreLink(){
+    public void makeSureThatNewFormIsOpenedIfClickSendOneMoreLink() {
         registrationFormPage.openRegistrationForm();
         registrationFormPage.checkURL();
         registrationFormPage.submitForm();
@@ -46,7 +46,7 @@ public class OpenRegistrationForm extends ParentTest {
     @Test
     @Description("TestCase 47: Verify content of the form")
     @Severity(SeverityLevel.CRITICAL)
-    public void verifyFormContent(){
+    public void verifyFormContent() {
         registrationFormPage.openRegistrationForm();
         registrationFormPage.checkURL();
         checkExpectedResult("Header elements should be displayed", registrationFormPage.isHeaderElementsDisplayed());
@@ -57,7 +57,7 @@ public class OpenRegistrationForm extends ParentTest {
     @Test
     @Description("TestCase_50: Check default value in the gender field")
     @Severity(SeverityLevel.NORMAL)
-    public void checkDefaultValueInGenderField(){
+    public void checkDefaultValueInGenderField() {
         registrationFormPage.openRegistrationForm();
         registrationFormPage.checkURL();
         checkExpectedResult("Inappropriate default value in the gender field", registrationFormPage.checkSelectedGender(), "Выбрать");
@@ -66,7 +66,7 @@ public class OpenRegistrationForm extends ParentTest {
     @Test
     @Description("TestCase_51: Check validation color of sections")
     @Severity(SeverityLevel.NORMAL)
-    public void checkValidationColorOfSection(){
+    public void checkValidationColorOfSection() {
         registrationFormPage.openRegistrationForm();
         registrationFormPage.checkURL();
         registrationFormPage.clickSendButton();
