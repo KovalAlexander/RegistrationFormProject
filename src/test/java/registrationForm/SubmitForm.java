@@ -121,7 +121,7 @@ public class SubmitForm extends ParentTest {
     @Test
     @Description("TestCase_44: Verify that impossible submit form if required fields are not filled")
     @Severity(SeverityLevel.CRITICAL)
-    public void verifyThatImpossibleSubmitFormIfRequiredFieldsAreNotFilled(){
+    public void verifyThatImpossibleSubmitFormIfRequiredFieldsAreNotFilled() {
         registrationFormPage.openRegistrationForm();
         registrationFormPage.checkURL();
         registrationFormPage.clickSendButton();
@@ -145,7 +145,7 @@ public class SubmitForm extends ParentTest {
     @Test
     @Description("TestCase_46: Make sure that quantity limits for fields in the DB the same as on the form")
     @Severity(SeverityLevel.CRITICAL)
-    public void makeSureThatQuantityLimitsForFieldsInDBTheSameAsOnTheForm(){
+    public void makeSureThatQuantityLimitsForFieldsInDBTheSameAsOnTheForm() {
         registrationFormPage.openRegistrationForm();
         registrationFormPage.checkURL();
         registrationFormPage.enterEmail("Тест Тест Тест Тест Тест Тест Тест Тест Тест Тест Тест Тест Test Test @#$%");

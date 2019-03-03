@@ -101,6 +101,10 @@ public class RegistrationFormPage extends ParentPage {
     @FindBy(xpath = ".//div[@class='freebirdFormviewerViewHeaderRequiredLegend' and contains(text(), 'Обязательно')]")
     private WebElement textRequired;
 
+    public WebElement genderOptions(String genderOption) {
+        return webDriver.findElement(By.xpath(".//div[@class='exportSelectPopup quantumWizMenuPaperselectPopup']//content[contains(text(), '" + genderOption + "')]"));
+    }
+
     public RegistrationFormPage(WebDriver webDriver) {
         super(webDriver, config.relativeURLRegistrationForm);
     }
@@ -143,7 +147,6 @@ public class RegistrationFormPage extends ParentPage {
         }
     }
 
-    @Step
     public boolean isSendButtonDisplayed() {
         return actionsWithElements.isElementDisplayed(buttonSend);
     }
@@ -169,11 +172,6 @@ public class RegistrationFormPage extends ParentPage {
     }
 
     @Step
-    public void setCorrectBirthDate() {
-        enterBirthDate(DateConverter.getYesterdayDate());
-    }
-
-    @Step
     public void enterName(String name) {
         actionsWithElements.enterTextInToElement(inputName, name);
     }
@@ -181,10 +179,6 @@ public class RegistrationFormPage extends ParentPage {
     @Step
     public void enterValidName() {
         enterName(user.getName());
-    }
-
-    public WebElement genderOptions(String genderOption) {
-        return webDriver.findElement(By.xpath(".//div[@class='exportSelectPopup quantumWizMenuPaperselectPopup']//content[contains(text(), '" + genderOption + "')]"));
     }
 
     @Step
@@ -218,12 +212,10 @@ public class RegistrationFormPage extends ParentPage {
         return actionsWithElements.getElementValue(inputEmailAddress);
     }
 
-    @Step
     public boolean isValidationMessageOfEmailFieldDisplayed() {
         return actionsWithElements.isElementDisplayed(validationMessageOfEmailField);
     }
 
-    @Step
     public boolean isRedEmailSectionDisplayed() {
         return actionsWithElements.isElementDisplayed(redEmailSection);
     }
@@ -237,7 +229,6 @@ public class RegistrationFormPage extends ParentPage {
         return actionsWithElements.getElementText(validationMessageOfEmailField);
     }
 
-    @Step
     public boolean isNotRedEmailSectionDisplayed() {
         return actionsWithElements.isElementDisplayed(sectionEmail);
     }
@@ -276,12 +267,10 @@ public class RegistrationFormPage extends ParentPage {
         return actionsWithElements.getElementValue(inputBirthDate).split("-")[0];
     }
 
-    @Step
     public boolean isValidationMessageOfBirthDateFieldDisplayed() {
         return actionsWithElements.isElementDisplayed(validationMessageOfBirthDateField);
     }
 
-    @Step
     public boolean isRedBirthDateSectionDisplayed() {
         return actionsWithElements.isElementDisplayed(redBirthDateSection);
     }
@@ -295,7 +284,6 @@ public class RegistrationFormPage extends ParentPage {
         actionsWithElements.clickOnElement(inputBirthDate);
     }
 
-    @Step
     public boolean isNotRedBirthDateSectionDisplayed() {
         return actionsWithElements.isElementDisplayed(sectionBirthDate);
     }
@@ -305,12 +293,10 @@ public class RegistrationFormPage extends ParentPage {
         actionsWithElements.clickOnElement(inputName);
     }
 
-    @Step
     public boolean isValidationMessageOfNameFieldDisplayed() {
         return actionsWithElements.isElementDisplayed(validationMessageOfNameField);
     }
 
-    @Step
     public boolean isNotRedNameSectionDisplayed() {
         return actionsWithElements.isElementDisplayed(sectionName);
     }
@@ -319,7 +305,6 @@ public class RegistrationFormPage extends ParentPage {
         return actionsWithElements.getElementText(validationMessageOfNameField);
     }
 
-    @Step
     public boolean isRedNameSectionDisplayed() {
         return actionsWithElements.isElementDisplayed(redNameSection);
     }
@@ -334,13 +319,6 @@ public class RegistrationFormPage extends ParentPage {
         actionsWithElements.pressBackSpaceButton();
     }
 
-    @Step
-    public void deleteLastSymbol() {
-        actionsWithElements.clickOnElement(inputName);
-        actionsWithElements.pressEndButton();
-    }
-
-    @Step
     public boolean isValidationMessageOfGenderFieldDisplayed() {
         return actionsWithElements.isElementDisplayed(validationMessageOfGenderField);
     }
@@ -349,7 +327,6 @@ public class RegistrationFormPage extends ParentPage {
         return actionsWithElements.getElementText(validationMessageOfGenderField);
     }
 
-    @Step
     public boolean isRedGenderSectionDisplayed() {
         return actionsWithElements.isElementDisplayed(redGenderSection);
     }
@@ -359,7 +336,6 @@ public class RegistrationFormPage extends ParentPage {
         return actionsWithElements.getElementText(ddGender);
     }
 
-    @Step
     public boolean isNotRedGenderSectionDisplayed() {
         return actionsWithElements.isElementDisplayed(sectionGender);
     }
@@ -388,6 +364,7 @@ public class RegistrationFormPage extends ParentPage {
         return webDriver.findElement(By.xpath(".//div[@aria-label= '" + moodOption + "']"));
     }
 
+    @Step
     public void setStateOfMoodCheckBox(String option, String state) {
         actionsWithElements.setNeededStateToCheckBox(checkBoxMood(option), state);
     }
@@ -408,21 +385,10 @@ public class RegistrationFormPage extends ParentPage {
         actionsWithElements.enterTextInToElementWithMask(inputAnother, value);
     }
 
-    public String getAnotherValue() {
-        return actionsWithElements.getElementValue(inputAnother);
-    }
-
-    public void pressPageDownButton() {
-        actionsWithElements.pressPageDownButton();
-        sleep(1000);
-    }
-
-    @Step
     public boolean isValidationMessageOfAnotherFieldDisplayed() {
         return actionsWithElements.isElementDisplayed(validationMessageOfMoodSection);
     }
 
-    @Step
     public boolean isRedMoodSectionDisplayed() {
         return actionsWithElements.isElementDisplayed(redMoodSection);
     }
@@ -431,7 +397,6 @@ public class RegistrationFormPage extends ParentPage {
         return actionsWithElements.getElementText(validationMessageOfMoodSection);
     }
 
-    @Step
     public boolean isNotRedMoodSectionDisplayed() {
         return actionsWithElements.isElementDisplayed(sectionMood);
     }
@@ -446,12 +411,10 @@ public class RegistrationFormPage extends ParentPage {
         enterAnotherValue(value);
     }
 
-    @Step
     public boolean isValidationMessageOfMoodFieldDisplayed() {
         return actionsWithElements.isElementDisplayed(validationMessageOfMoodSection);
     }
 
-    @Step
     public boolean isHeaderElementsDisplayed() {
         return actionsWithElements.isElementDisplayed(headerText) &&
                 actionsWithElements.isElementDisplayed(nameForm) &&
@@ -462,7 +425,6 @@ public class RegistrationFormPage extends ParentPage {
         return actionsWithElements.getElementColor(textRequired, "color");
     }
 
-    @Step
     public boolean isAllSectionsPresent() {
         return isNotRedEmailSectionDisplayed() &&
                 isNotRedBirthDateSectionDisplayed() &&

@@ -187,7 +187,7 @@ public class BirthDate extends ParentTest {
     @Test
     @Description("TestCase_26: Varify that date mask is work during entering date")
     @Severity(SeverityLevel.MINOR)
-    public void verifyThatDateMaskIsWorkDuringEnteringDate(){
+    public void verifyThatDateMaskIsWorkDuringEnteringDate() {
         registrationFormPage.openRegistrationForm();
         registrationFormPage.checkURL();
         registrationFormPage.enterBirthDate("03032001");
